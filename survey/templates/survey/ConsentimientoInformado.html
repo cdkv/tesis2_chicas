@@ -1,0 +1,62 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Consentimiento informado
+{% endblock %}
+
+{% block content %}
+<style>
+p {font-size:20px; text-align:justify; line-height:35px}
+</style>
+
+
+<br>
+
+<p>
+El propósito de esta ficha de consentimiento es proveer a los y las participantes una clara explicación de la naturaleza de esta investigación, así como del rol que cumplirán dentro de la misma.
+</p>
+<p>
+
+</p>
+<p>
+La presente investigación es conducida por Jesus Gastañaduy, miembro del Grupo de Economía Conductual y Experimental de la Pontificia Universidad Católica del Perú (GECE-PUCP).
+</p>
+<p>
+
+</p>
+<p>
+Esta investigación explora la toma de decisiones en distintas condiciones.
+<u>Si usted accede a participar en este estudio, se le pedirá realizar una tarea experimental, así como completar una serie de preguntas al final.
+Esto tomará aproximadamente 15 minutos de su tiempo.</u>
+Por su participación, recibirá una compensación monetaria vía Yape o Plin.
+</p>
+
+<p>
+</p>
+<p>
+Respecto a la compensación monetaria, <u>cada participante recibirá un monto fijo de S/5 una vez culminado el estudio experimental.
+Adicionalmente, recibirá un pago de entre S/2 y S/12, dependiendo de sus resultados en la tarea experimental</u>.
+Así pues, las ganancias finales de cada participante fluctuarán entre S/7 y S/17.
+</p>
+<p>
+
+</p>
+<p>
+La participación en este estudio es estrictamente voluntaria.
+La información que se recoja será confidencial; no se usará para ningún otro propósito fuera de los de esta investigación.
+No se devolverán resultados individuales ni grupales.
+Sus respuestas serán codificadas usando un número de identificación y, por lo tanto, serán anónimas.
+</p>
+<p>
+
+</p>
+<p>
+Si usted tiene alguna consulta sobre este proyecto o quisiera obtener información adicional, puede escribir un correo electrónico a la siguiente dirección: j.gastanaduy@pucp.pe.
+</p>
+
+<br>
+{% formfield player.acepta label="He leído TODO el consentimiento informado y acepto participar de esta investigación"%}
+
+{% next_button %}
+{% endblock %}

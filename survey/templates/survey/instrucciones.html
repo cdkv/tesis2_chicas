@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Instrucciones
+{% endblock %}
+
+{% block content %}
+
+    <p>
+    Cada juego consiste en dar un predicción/decisión sobre la urna que se esta usando, después de recibir
+        una señal y haber visto las decisiones de los anteriores participantes.
+    </p>
+
+    <p>
+
+   Se les presenta una dos urnas , en la urna A hay dos bolas rojas y en la urna B dos bolas azules,
+        en la urna B hay dos bolas azules y una roja. A cada uno se les presenta una bola que pertenece a
+        una de estas urnas. Ustedes no sabrán a que urna pertenece. La bola que reciban es la señal que los
+        ayudará a decir. Además de eso , podrán observar las decisiones de los anteriores participantes.
+        Con ello, tienen que decidir a qué urna pertenece la bola. La decisión correcta será recompensada .
+        Después de este primer ejercicio, van a pasar al siguiente, donde la dinámica es similar .
+        La diferencia aquí es que cada urna tiene mayor número de bolas.
+        En la Urna A se tiene cuatro bolas rojas y dos bolas azules , en la Urna B se tiene cuatro bolas azules y dos rojas.
+        Ahora, cada participante recibe 0, 1 u 2 bolas. Cuantas bolas reciba cada participante será aleatorio.
+        Después de recibir la bola, y observar la decisión de los anteriores participantes del grupo, deben hacer su decisión.
+    </p>
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Instrucciones
+{% endblock %}
+
+{% block content %}
+Le ha tocado una bola roja
+    <p>
+       El jugador 1 decidio la urna {{ group.urna1 }}
+    </p>
+
+    <p>
+       El jugador 2 decidio la urna {{ group.urna2 }}
+
+    </p>
+
+    <p>
+       El jugador 3 decidio la urna {{ group.urna3 }}
+
+    </p>
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}
