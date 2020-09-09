@@ -18,7 +18,7 @@ SESSION_CONFIGS = [
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = dict(
-    real_world_currency_per_point=1.00, participation_fee=0.00, doc=""
+    real_world_currency_per_point=1.00, participation_fee=5.00, doc=""
 )
 
 # ISO-639 code
@@ -26,8 +26,8 @@ SESSION_CONFIG_DEFAULTS = dict(
 LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = 'USD'
-USE_POINTS = True
+REAL_WORLD_CURRENCY_CODE = 'S/.'
+USE_POINTS = False
 
 ROOMS = [
     dict(

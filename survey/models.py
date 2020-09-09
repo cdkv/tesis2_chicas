@@ -8,46 +8,80 @@ from otree.api import (
     Currency as c,
     currency_range,
 )
-
+import random
 
 class Constants(BaseConstants):
     name_in_url = 'survey'
     players_per_group = 4
     num_rounds = 1
+    lista = ['A', 'B']
 
 
 class Subsession(BaseSubsession):
-    pass
+    def creating_session(self):
+        for g in self.get_groups():
+            g.myrandom = random.choice(Constants.lista)
 
+        for p in self.get_players():
+            p.random_id = random.randint(0, 5)
 
 class Group(BaseGroup):
+    myrandom = models.StringField()
+
     urna1 = models.StringField(
         choices=[['A', 'A'], ['B', 'B']],
-        label='¿que bola le corresponde?',
+        label='¿A qué urna pertenece la esfera?',
         widget=widgets.RadioSelect,
     )
 
     urna2 = models.StringField(
         choices=[['A', 'A'], ['B', 'B']],
-        label='¿que bola le corresponde?',
+        label='¿A qué urna pertenece la esfera?',
         widget=widgets.RadioSelect,
     )
 
     urna3 = models.StringField(
         choices=[['A', 'A'], ['B', 'B']],
-        label='¿que bola le corresponde?',
+        label='¿A qué urna pertenece la esfera?',
         widget=widgets.RadioSelect,
     )
 
     urna4 = models.StringField(
         choices=[['A', 'A'], ['B', 'B']],
-        label='¿que bola le corresponde?',
+        label='¿A qué urna pertenece la esfera?',
+        widget=widgets.RadioSelect,
+    )
+
+
+
+    urna5 = models.StringField(
+        choices=[['A', 'A'], ['B', 'B']],
+        label='¿A qué urna pertenece la esfera?',
+        widget=widgets.RadioSelect,
+    )
+
+    urna6 = models.StringField(
+        choices=[['A', 'A'], ['B', 'B']],
+        label='¿A qué urna pertenece la esfera?',
+        widget=widgets.RadioSelect,
+    )
+
+    urna7 = models.StringField(
+        choices=[['A', 'A'], ['B', 'B']],
+        label='¿A qué urna pertenece la esfera?',
+        widget=widgets.RadioSelect,
+    )
+
+    urna8 = models.StringField(
+        choices=[['A', 'A'], ['B', 'B']],
+        label='¿A qué urna pertenece la esfera?',
         widget=widgets.RadioSelect,
     )
 
 class Player(BasePlayer):
 
     age = models.IntegerField(label='Edad:', min=18, max=90)
+    random_id = models.IntegerField()
 
     gender = models.IntegerField(
         choices=[[0, 'Hombre'], [1, 'Mujer']],
