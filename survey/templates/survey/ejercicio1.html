@@ -2,14 +2,21 @@
 {% load otree %}
 
 {% block title %}
-Instrucciones
+Ejercicio 1
 {% endblock %}
 
 {% block content %}
 
-    <p>
-Le ha tocado una bola roja
-    </p>
+
+{% if player.random_id < 3  %}
+<p> <b> Le ha tocado una BOLA ROJA </b></p>
+{% endif %}
+
+{% if player.random_id > 2  %}
+<p> <b> Le ha tocado una BOLA AZUL </b></p>
+{% endif %}
+
+
        {% formfields %}
 
     <p>

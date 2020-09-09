@@ -1,0 +1,40 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Ejercicio 2
+{% endblock %}
+
+{% block content %}
+
+  {% if player.random_id == 0  %}
+<p> <b> No le ha tocado ninguna señal </b></p>
+{% endif %}
+
+{% if player.random_id == 1  %}
+<p> <b> Le ha tocado una BOLA AZUL </b></p>
+{% endif %}
+
+  {% if player.random_id == 2  %}
+<p> <b> Le ha tocado una BOLA ROJA </b></p>
+{% endif %}
+
+{% if player.random_id == 3  %}
+<p> <b> Le ha tocado primero una BOLA AZUL, y después una BOLA AZUL </b></p>
+{% endif %}
+
+  {% if player.random_id == 4  %}
+<p> <b> Le ha tocado primero una BOLA ROJA, y después una BOLA ROJA </b></p>
+{% endif %}
+
+{% if player.random_id == 5  %}
+<p> <b> Le ha tocado primero una BOLA AZUL, y después una BOLA ROJA </b></p>
+{% endif %}
+
+       {% formfields %}
+
+
+
+    {% next_button %}
+
+{% endblock %}

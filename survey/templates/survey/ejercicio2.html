@@ -2,14 +2,23 @@
 {% load otree %}
 
 {% block title %}
-Instrucciones
+Ejercicio 1
 {% endblock %}
 
 {% block content %}
-Le ha tocado una bola roja
+
+{% if player.random_id < 3  %}
+<p> <b> Le ha tocado una BOLA ROJA </b></p>
+{% endif %}
+
+{% if player.random_id > 2  %}
+<p> <b> Le ha tocado una BOLA AZUL </b></p>
+{% endif %}
+
     <p>
        El jugador 1 decidio la urna {{ group.urna1 }}
     </p>
+
 
 
     {% formfields %}

@@ -53,6 +53,35 @@ class ejercicio4 (Page):
     def is_displayed(self):
         return self.player.id_in_group == 4
 
+class ejercicio5 (Page):
+    form_model = 'group'
+    form_fields = ['urna5']
+
+    def is_displayed(self):
+        return self.player.id_in_group == 1
+
+
+class ejercicio6 (Page):
+    form_model = 'group'
+    form_fields = ['urna6']
+
+    def is_displayed(self):
+        return self.player.id_in_group == 2
+
+class ejercicio7 (Page):
+    form_model = 'group'
+    form_fields = ['urna7']
+
+    def is_displayed(self):
+        return self.player.id_in_group == 3
+
+class ejercicio8 (Page):
+    form_model = 'group'
+    form_fields = ['urna8']
+
+    def is_displayed(self):
+        return self.player.id_in_group == 4
+
 class Pagos (Page):
     pass
 
@@ -67,4 +96,4 @@ class agradecimiento(Page):
         return self.player.acepta =="no"
 
 
-page_sequence = [ConsentimientoInformado, agradecimiento, instrucciones, Prueba, ejercicio1, NormalWaitPage, ejercicio2, NormalWaitPage, ejercicio3, NormalWaitPage, ejercicio4, NormalWaitPage, Demografico, Pagos ]
+page_sequence = [ConsentimientoInformado, agradecimiento, instrucciones, Prueba, ejercicio1, NormalWaitPage, ejercicio2, NormalWaitPage, ejercicio3, NormalWaitPage, ejercicio4, NormalWaitPage, instrucciones2, ejercicio5, NormalWaitPage, ejercicio6, NormalWaitPage, ejercicio7, NormalWaitPage, ejercicio8, NormalWaitPage, Demografico, Pagos ]
