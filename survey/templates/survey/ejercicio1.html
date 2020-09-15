@@ -7,21 +7,28 @@ Ejercicio 1
 
 {% block content %}
 
-
-{% if player.random_id < 3  %}
-<p> <b> Le ha tocado una BOLA ROJA </b></p>
+{% if group.myrandom == 'A' %}
+{% if player.random_id <= 18  %}
+<p> <b> Le ha tocado una ESFERA ROJA </b></p>
 {% endif %}
 
-{% if player.random_id > 2  %}
-<p> <b> Le ha tocado una BOLA AZUL </b></p>
+{% if player.random_id >= 19  %}
+<p> <b> Le ha tocado una ESFERA AZUL </b></p>
+{% endif %}
 {% endif %}
 
+{% if group.myrandom == 'B' %}
+{% if player.random_id <= 18  %}
+<p> <b> Le ha tocado una ESFERA AZUL </b></p>
+{% endif %}
 
+{% if player.random_id >= 19  %}
+<p> <b> Le ha tocado una ESFERA ROJA </b></p>
+{% endif %}
+{% endif %}
        {% formfields %}
 
-    <p>
 
-   </p>
 
     {% next_button %}
 
