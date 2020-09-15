@@ -2,34 +2,65 @@
 {% load otree %}
 
 {% block title %}
-Ejercicio 1
+Ejercicio 4
 {% endblock %}
 
 {% block content %}
 
-{% if player.random_id < 3  %}
-<p> <b> Le ha tocado una BOLA ROJA </b></p>
+{% if player.random_id <= 9 %}
+<p> <b> No le ha tocado ninguna ESFERA </b></p>
 {% endif %}
 
-{% if player.random_id > 2  %}
-<p> <b> Le ha tocado una BOLA AZUL </b></p>
+{% if group.myrandom == 'A' %}
+{% if player.random_id >= 10 and player.random_id <= 15  %}
+<p> <b> Le ha tocado una ESFERA ROJA </b></p>
 {% endif %}
 
-    <p>
-       El jugador 1 decidio la urna {{ group.urna1 }}
-    </p>
+{% if player.random_id >= 16 and player.random_id <= 18 %}
+<p> <b> Le ha tocado una ESFERA AZUL </b></p>
+{% endif %}
 
-    <p>
-       El jugador 2 decidio la urna {{ group.urna2 }}
+ {% if player.random_id >= 19 and player.random_id <= 22   %}
+<p> <b> Le ha tocado primero una ESFERA ROJA, y después una ESFERA ROJA </b></p>
+{% endif %}
 
-    </p>
+{% if player.random_id == 23  %}
+<p> <b> Le ha tocado primero una ESFERA AZUL, y después una ESFERA AZUL </b></p>
+{% endif %}
+{% endif %}
 
-    <p>
-       El jugador 3 decidio la urna {{ group.urna3 }}
 
-    </p>
 
-    {% formfields %}
+{% if group.myrandom == 'B' %}
+{% if player.random_id >= 10 and player.random_id <= 15  %}
+<p> <b> Le ha tocado una ESFERA AZUL </b></p>
+{% endif %}
+
+{% if player.random_id >= 16 and player.random_id <= 18 %}
+<p> <b> Le ha tocado una ESFERA ROJA </b></p>
+{% endif %}
+
+ {% if player.random_id >= 19 and player.random_id <= 22   %}
+<p> <b> Le ha tocado primero una ESFERA AZUL, y después una ESFERA AZUL </b></p>
+{% endif %}
+
+{% if player.random_id == 23  %}
+<p> <b> Le ha tocado primero una ESFERA ROJA, y después una ESFERA ROJA </b></p>
+{% endif %}
+{% endif %}
+
+{% if player.random_id >= 24 and player.random_id <= 25   %}
+<p> <b> Le ha tocado primero una ESFERA ROJA, y después una ESFERA AZUL </b></p>
+{% endif %}
+
+{% if player.random_id >= 26 and player.random_id <= 27  %}
+<p> <b> Le ha tocado primero una ESFERA AZUL, y después una ESFERA ROJA </b></p>
+{% endif %}
+
+
+       {% formfields %}
+
+
 
     {% next_button %}
 
