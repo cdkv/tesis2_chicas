@@ -1,4 +1,4 @@
-% extends "global/Page.html" %}
+{% extends "global/Page.html" %}
 {% load otree %}
 
 {% block title %}
@@ -64,6 +64,28 @@ Ejercicio 8
 <p> <b> Le ha tocado primero una ESFERA AZUL, y después una ESFERA ROJA </b></p>
 {% endif %}
 
+    <p>
+       El jugador 1 decidio la urna {{ group.urna9 }}
+    </p>
+
+    <p>
+       El jugador 2 decidio la urna {{ group.urna10 }}
+
+    </p>
+
+    <p>
+       El jugador 3 decidio la urna {{ group.urna11 }}
+
+    </p>
+
+    <p>
+       El jugador 4 decidio la urna {{ group.urna12 }}
+
+    </p>
+     <p>
+       El jugador 5 decidio la urna {{ group.urna13 }}
+
+     </p>
 
 
        {% formfields %}
@@ -73,4 +95,3 @@ Ejercicio 8
     {% next_button %}
 
 {% endblock %}
-

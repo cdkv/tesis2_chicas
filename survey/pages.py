@@ -164,7 +164,7 @@ class ejercicio14 (Page):
             self.player.payoff = self.player.payoff + 5
 
     def is_displayed(self):
-        return self.player.id_in_group == 4
+        return self.player.id_in_group == 6
 class ejercicio15 (Page):
     form_model = 'group'
     form_fields = ['urna15']
@@ -174,7 +174,7 @@ class ejercicio15 (Page):
             self.player.payoff = self.player.payoff + 5
 
     def is_displayed(self):
-        return self.player.id_in_group == 4
+        return self.player.id_in_group == 7
 class ejercicio16 (Page):
     form_model = 'group'
     form_fields = ['urna16']
@@ -184,7 +184,7 @@ class ejercicio16 (Page):
             self.player.payoff = self.player.payoff + 5
 
     def is_displayed(self):
-        return self.player.id_in_group == 4
+        return self.player.id_in_group == 8
 
 
 
