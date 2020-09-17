@@ -13,9 +13,9 @@ import random
 
 
 class Constants(BaseConstants):
-    name_in_url = 'survey'
+    name_in_url = 'resultados'
     players_per_group = 8
-    num_rounds = 4
+    num_rounds = 1
     lista = ['A', 'B']
 
 

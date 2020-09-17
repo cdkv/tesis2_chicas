@@ -7,8 +7,15 @@ SESSION_CONFIGS = [
     dict(
         name='survey',
         display_name='survey',
-        num_demo_participants=4,
-        app_sequence=['survey'],
+        num_demo_participants=8,
+        app_sequence=['instrucciones','survey','resultados'],
+    ),
+
+    dict(
+        name='survey2',
+        display_name='survey2',
+        num_demo_participants=8,
+        app_sequence=['instrucciones', 'survey2', 'resultados'],
     ),
 ]
 
