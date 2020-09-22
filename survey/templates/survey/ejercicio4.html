@@ -2,24 +2,47 @@
 {% load otree %}
 
 {% block title %}
-Instrucciones
+Ejercicio 1
 {% endblock %}
 
 {% block content %}
-Le ha tocado una bola roja
+
+{% if group.myrandom == 'A' %}
+{% if player.random_id <= 18  %}
+<p> <b> Te ha tocado una ESFERA ROJA </b></p>
+{% endif %}
+
+{% if player.random_id >= 19  %}
+<p> <b> Te ha tocado una ESFERA AZUL </b></p>
+{% endif %}
+{% endif %}
+
+{% if group.myrandom == 'B' %}
+{% if player.random_id <= 18  %}
+<p> <b> Te ha tocado una ESFERA AZUL </b></p>
+{% endif %}
+
+{% if player.random_id >= 19  %}
+<p> <b> Te ha tocado una ESFERA ROJA </b></p>
+{% endif %}
+{% endif %}
+
     <p>
-       El jugador 1 decidio la urna {{ group.urna1 }}
+       El jugador 1 decidió la urna {{ group.urna1 }}
     </p>
 
     <p>
-       El jugador 2 decidio la urna {{ group.urna2 }}
+       El jugador 2 decidió la urna {{ group.urna2 }}
 
     </p>
 
     <p>
-       El jugador 3 decidio la urna {{ group.urna3 }}
+       El jugador 3 decidió la urna {{ group.urna3 }}
 
     </p>
+
+
+
 
     {% formfields %}
 

@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Resultados
+{% endblock %}
+
+{% block content %}
+
+{% for p in player_in_all_rounds %}
+
+    En la ronda {{ p.round_number }}. Se uso la urna {{ p.urnausada }}
+    Fuiste el jugador  {{ p.id_in_group }} y te decidiste por la urna {{ p.urnadecidida1 }}
+
+    {% endfor %}
+Se te va a pagar por tu respuesta en la ronda {{ player.rondaapagar }}
+
+
+
+
+
+
+
+
+    {% next_button %}
+
+{% endblock %}

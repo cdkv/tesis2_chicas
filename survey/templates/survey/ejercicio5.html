@@ -9,21 +9,21 @@ Ejercicio 1
 
 {% if group.myrandom == 'A' %}
 {% if player.random_id <= 18  %}
-<p> <b> Le ha tocado una ESFERA ROJA </b></p>
+<p> <b> Te ha tocado una ESFERA ROJA </b></p>
 {% endif %}
 
 {% if player.random_id >= 19  %}
-<p> <b> Le ha tocado una ESFERA AZUL </b></p>
+<p> <b> Te ha tocado una ESFERA AZUL </b></p>
 {% endif %}
 {% endif %}
 
 {% if group.myrandom == 'B' %}
 {% if player.random_id <= 18  %}
-<p> <b> Le ha tocado una ESFERA AZUL </b></p>
+<p> <b> Te ha tocado una ESFERA AZUL </b></p>
 {% endif %}
 
 {% if player.random_id >= 19  %}
-<p> <b> Le ha tocado una ESFERA ROJA </b></p>
+<p> <b> Te ha tocado una ESFERA ROJA </b></p>
 {% endif %}
 {% endif %}
 
@@ -31,13 +31,21 @@ Ejercicio 1
        El jugador 1 decidió la urna {{ group.urna1 }}
     </p>
 
+
     <p>
        El jugador 2 decidió la urna {{ group.urna2 }}
 
     </p>
 
+    <p>
+       El jugador 3 decidió la urna {{ group.urna3 }}
 
+    </p>
 
+     <p>
+       El jugador 4 decidió la urna {{ group.urna4 }}
+
+    </p>
 
     {% formfields %}
 

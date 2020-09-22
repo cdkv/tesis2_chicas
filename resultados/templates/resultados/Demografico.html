@@ -1,0 +1,64 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Encuesta
+{% endblock %}
+
+{% block content %}
+    {% formfield player.gender %}
+{% formfield player.escala %}
+{% formfield player.age %}
+    <p>
+<table>
+  <tr>
+    <th>Lotería (50/50) </th>
+    <th>P. alto</th>
+    <th>P. bajo</th>
+  </tr>
+  <tr>
+    <td>Lotería 1</td>
+    <td> 28 </td>
+    <td> 28 </td>
+  </tr>
+  <tr>
+    <td>Lotería 2</td>
+    <td> 24 </td>
+    <td> 36 </td>
+  </tr>
+  <tr>
+    <td>Lotería 3</td>
+    <td> 20 </td>
+    <td> 44 </td>
+  </tr>
+  <tr>
+    <td>Lotería 4</td>
+    <td> 16 </td>
+    <td> 52 </td>
+  </tr>
+  <tr>
+    <td>Lotería 5</td>
+    <td> 12 </td>
+    <td> 60 </td>
+  </tr>
+  <tr>
+    <td>Lotería 6</td>
+    <td> 2 </td>
+    <td> 70 </td>
+  </tr>
+</table>
+
+    </p>
+
+{% formfield player.loterias %}
+
+
+
+
+    <p>
+
+   </p>
+
+    {% next_button %}
+
+{% endblock %}
